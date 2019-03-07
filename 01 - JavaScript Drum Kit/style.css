@@ -1,0 +1,180 @@
+ body{
+  background-color: #f4da6b;
+}
+.title{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+
+.monster {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 160px;
+    height: 230px;
+    animation: jump 4s infinite;
+}
+
+.ear {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 14px;
+    height: 40px;
+}
+
+.ear_right {
+    right: 50px;
+    transform: rotate(10deg);
+    animation: ear-right-move 4s infinite;
+}
+
+.ear_left {
+    left: 50px;
+    transform: rotate(-10deg);
+    animation: ear-left-move 4s infinite;
+}
+
+.ear_up {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    border-radius: 50%;
+    background: #4CA5FF;
+    box-shadow: inset -2px -1px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.ear_body {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: #4CA5FF;
+}
+
+.body {
+    margin: 25px 0 0;
+    width: 160px;
+    height: 160px;
+    background: #4CA5FF;
+    border-radius: 50%;
+    box-shadow: inset 2px -14px rgba(0,0,0,0.1);
+}
+
+.eye {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    top: 20px;
+    background: #fff;
+    border-radius: 50%;
+    animation:  blinking-eyes 4s infinite, jump 4s infinite;
+}
+
+.iris {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    overflow: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #000;
+    border-radius: 50%;
+}
+
+.mouth {
+    display:block;
+    width: 40%;
+    height: 15%;
+    background:rgba(0,0,0,.9);
+    border-radius:0 0 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 43.5%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    animation: jump 4s infinite;
+}
+
+.tooth {
+    display:block;
+    width: 40%;
+    height: 7%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 43.5%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: jump 4s infinite;
+}
+
+.teeth {
+    width: 12%;
+    height: 60%;
+    background: #fff;
+    border: 0;
+    margin: 0 3.9%;
+    float: left;
+    border-radius: 0 0 25% 25%;
+    transition: all 0.3s;
+}
+
+.playing{
+  transform: translateY(15px) scale(0)
+}
+
+.ear-scale{
+  transform: scale(1.3);
+  background-color: white;
+}
+
+.shadow {
+    height: 20px;
+    background: rgba(0,0,0,.1);
+    width: 70%;
+    border-radius: 100%;
+    margin: -15px 0 0 30%;
+    transition: 0.3s;
+    z-index: -1;
+    position: absolute;
+}
+
+@keyframes blinking-eyes { 
+  14% {opacity: 1;} 
+  15% {opacity: 0} 
+  16% {opacity: 0} 
+  17% {opacity: 1;} 
+  34% {opacity: 1;} 
+  35% {opacity: 0} 
+  36% {opacity: 0} 
+  37% {opacity: 1} 
+}
+
+@keyframes jump{ 
+  50% {transform:translateY(0);} 
+  60% {transform:translateY(-5px);} 
+  70% {transform:translateY(-5px);} 
+  80% {transform:translateY(0);} 
+}
+
+@keyframes ear-right-move { 
+  50% {transform: rotate(20deg);} 
+} 
+ 
+
+@keyframes ear-left-move { 
+  50% {transform: rotate(-20deg);} 
+} 

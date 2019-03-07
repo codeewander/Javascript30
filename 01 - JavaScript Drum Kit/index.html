@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Monster Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="monster">
+    <div class="ear ear_right">
+      <div class="ear_up key" data-key="55"></div>
+      <div class="ear_body"></div>
+    </div>
+    <div class="ear ear_left">
+      <div class="ear_up key" data-key="54"></div>
+      <div class="ear_body"></div>
+    </div>
+    <div class="body">
+      <div class="eye">
+        <div class="iris"></div>
+      </div>
+      <div class="tooth">
+        <div class="teeth key" data-key="49"></div>
+        <div class="teeth key" data-key="50"></div>
+        <div class="teeth key" data-key="51"></div>
+        <div class="teeth key" data-key="52"></div>
+        <div class="teeth key" data-key="53"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+  <div class="title">Press keyboard number 1 to 7 <br>AND have fun : )</div>
+
+  <audio data-key="49" src="sounds/clap.wav"></audio>
+  <audio data-key="50" src="sounds/hihat.wav"></audio>
+  <audio data-key="51" src="sounds/kick.wav"></audio>
+  <audio data-key="52" src="sounds/openhat.wav"></audio>
+  <audio data-key="53" src="sounds/boom.wav"></audio>
+  <audio data-key="54" src="sounds/ride.wav"></audio>
+  <audio data-key="55" src="sounds/snare.wav"></audio>
+
+  <script src="./dayone.js"></script>
+
+
+</body>
+
+</html>
