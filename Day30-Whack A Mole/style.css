@@ -45,13 +45,13 @@ button{
   margin: 0 auto;
 }
 
-.hole {
+.grass {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
-.hole:after {
+.grass:after {
   display: block;
   background: url(grass.svg) bottom center no-repeat;
   background-size: contain;
@@ -63,7 +63,7 @@ button{
   bottom: -30px;
 }
 
-.mole {
+.monster {
   background: url('monster.svg') bottom center no-repeat;
   background-size: 60%;
   position: absolute;
@@ -73,6 +73,6 @@ button{
   transition:all 0.4s;
 }
 
-.hole.up .mole {
+.grass.up .monster {
   top: -30px;
 }
