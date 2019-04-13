@@ -41,6 +41,7 @@
     const monsters = document.querySelectorAll('.monster')
     let lastGrass
     let timeUp = false
+    let score = 0
 
     //random grass of monster showup
     function randomGrass(grasses) {
@@ -71,6 +72,17 @@
         }
       }, time)
     }
+    //set playing time
+    function startGame() {
+      scoreBoard.textContent = 0
+      timeUp = false
+      score = 0
+      showUp()
+      setTimeout(() => {
+        timeUp = true
+      }, 10000)
+    }
+
 
   </script>
 </body>
