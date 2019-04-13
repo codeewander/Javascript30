@@ -41,16 +41,21 @@
     const monsters = document.querySelectorAll('.monster')
     let lastGrass
 
-    //randow grass of monster showup
+    //random grass of monster showup
     function randomGrass(grasses) {
       const index = Math.floor(Math.random() * monsters.length)
       const grass = grasses[index]
-      //avoid showup at the same grass
+      //avoid monster showing up at the same grass
       if (lastGrass === grass) {
         return randomGrass(grasses)
       }
       lastGrass = grass
       return grass
+    }
+    //random time of monster showup
+    function randomTime(min, max) {
+      const time = Math.round(Math.random() * (max - min) + min)
+      return time
     }
 
   </script>
