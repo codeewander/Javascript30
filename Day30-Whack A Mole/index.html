@@ -36,10 +36,16 @@
   </div>
 
   <script>
-    const holes = document.querySelectorAll('.grass');
+    const grasses = document.querySelectorAll('.grass');
     const scoreBoard = document.querySelector('.score');
-    const moles = document.querySelectorAll('.monster');
+    const monsters = document.querySelectorAll('.monster');
 
+    //randow grass of monster showup
+    function randowGrass(grasses) {
+      const index = Math.floor(Math.random() * monsters.length)
+      const grass = grasses[index]
+      return grass
+    }
   </script>
 </body>
 
