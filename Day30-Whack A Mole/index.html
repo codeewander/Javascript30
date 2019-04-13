@@ -40,6 +40,7 @@
     const scoreBoard = document.querySelector('.score')
     const monsters = document.querySelectorAll('.monster')
     let lastGrass
+    let timeUp = false
 
     //random grass of monster showup
     function randomGrass(grasses) {
@@ -56,6 +57,19 @@
     function randomTime(min, max) {
       const time = Math.round(Math.random() * (max - min) + min)
       return time
+    }
+
+    function showUp() {
+      const time = randomTime(300, 1000)
+      const grass = randomGrass(grasses)
+      grass.classList.add('up')
+
+      setTimeout(() => {
+        grass.classList.remove('up')
+        if (!timeUp) {
+          showUp()
+        }
+      }, time)
     }
 
   </script>
