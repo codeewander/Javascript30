@@ -83,6 +83,15 @@
       }, 10000)
     }
 
+    function scoreUpdate(e) {
+      if (!e.isTrusted) return
+      score++
+      console.log(score)
+      this.classList.remove('up')
+      scoreBoard.textContent = score
+    }
+
+    monsters.forEach(monster => monster.addEventListener('click', scoreUpdate))
 
   </script>
 </body>
