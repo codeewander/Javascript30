@@ -36,16 +36,23 @@
   </div>
 
   <script>
-    const grasses = document.querySelectorAll('.grass');
-    const scoreBoard = document.querySelector('.score');
-    const monsters = document.querySelectorAll('.monster');
+    const grasses = document.querySelectorAll('.grass')
+    const scoreBoard = document.querySelector('.score')
+    const monsters = document.querySelectorAll('.monster')
+    let lastGrass
 
     //randow grass of monster showup
-    function randowGrass(grasses) {
+    function randomGrass(grasses) {
       const index = Math.floor(Math.random() * monsters.length)
       const grass = grasses[index]
+      //avoid showup at the same grass
+      if (lastGrass === grass) {
+        return randomGrass(grasses)
+      }
+      lastGrass = grass
       return grass
     }
+
   </script>
 </body>
 
